@@ -2,6 +2,7 @@ body {
   background-image: url(/Images/bg-image.jpeg);
   background-repeat: no-repeat;
   background-size: 120%;
+  overflow-x: hidden; 
 }
 
 .container {
@@ -24,4 +25,9 @@ h1 {
   font-weight: 900;
   text-transform: capitalize;
   color: #fff;
+}
+
+
+iframe{
+  max-width: 100%:
 }
