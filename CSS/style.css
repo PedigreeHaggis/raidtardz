@@ -1,3 +1,10 @@
+@media screen and (max-width 540px){
+  .view{
+    width: 400px;
+  }
+
+}
+
 body {
   background-image: url(/Images/bg-image.jpeg);
   background-repeat: no-repeat;
