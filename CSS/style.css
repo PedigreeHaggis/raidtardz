@@ -1,15 +1,8 @@
-@media screen and (max-width 540px){
-  .view{
-    width: 400px;
-  }
-
-}
-
 body {
   background-image: url(/Images/bg-image.jpeg);
   background-repeat: no-repeat;
   background-size: 120%;
-  overflow-x: hidden; 
+  overflow-x: hidden;
 }
 
 .container {
@@ -34,7 +27,6 @@ h1 {
   color: #fff;
 }
 
-
-iframe{
-  max-width: 100%:
+iframe {
+  max-width: 100%;
 }
