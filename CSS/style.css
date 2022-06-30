@@ -1,3 +1,5 @@
+/* universal selectors */
+
 * {
   margin: 0;
   padding: 0;
@@ -9,16 +11,23 @@ html {
   font-family: "Montserrat", sans-serif;
 }
 
-main {
-  padding-top: 4.3125rem;
-}
-
 .flex {
   display: flex;
 }
 
-.wrap {
+.inline-flex {
+  display: inline-flex;
+}
+
+.flex-wrap {
   flex-wrap: wrap;
+}
+
+.bg-img {
+  background-image: url("../Images/mission_background.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 a {
@@ -26,15 +35,13 @@ a {
 }
 
 a:hover {
-  color: black;
+  color: gray;
+  text-decoration: none;
 }
 
 /* header section */
 
 header {
-  background-color: #e23e57;
-  border-bottom: 2px solid black;
-  position: fixed;
   min-height: 4.3125rem;
   width: 100%;
 }
@@ -43,7 +50,7 @@ header {
   color: white;
   min-height: 100%;
   padding: 1rem;
-  justify-content: space-between;
+  justify-content: space-around;
   gap: 0.625rem;
 }
 
@@ -61,11 +68,10 @@ header {
 .nav li {
   font-size: 1.375em;
   padding-left: 3rem;
+  opacity: 0.8;
 }
 
-.nav a {
-  text-decoration: none;
-}
+/* header section breakpoints */
 
 @media only screen and (max-width: 850px) {
   .nav li {
@@ -73,7 +79,7 @@ header {
   }
 }
 
-@media only screen and (max-width: 740px) {
+@media only screen and (max-width: 780px) {
   .header-container h1 {
     align-self: center;
     font-size: 2.5em;
@@ -85,7 +91,6 @@ header {
 
   .nav li {
     padding-bottom: 0.75rem;
-    font-size: 1em;
   }
 }
 
@@ -95,6 +100,155 @@ header {
   }
 
   .nav {
-    padding-top: 0.75em;
+    align-items: center;
+    padding-top: 0.5em;
+  }
+
+  .nav li {
+    margin: 0 auto;
+    padding: 0 0 0.5em 0;
+  }
+}
+
+/* mission section */
+
+.mission-container {
+  align-items: center;
+  justify-content: flex-end;
+  height: 43.75rem;
+}
+
+.mission-container .statement {
+  background: rgba(79, 189, 186, 0.5);
+  color: white;
+  text-align: center;
+  min-width: 50%;
+  min-height: 25%;
+  padding: 1.25em;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mission-container .statement h1 {
+  font-size: 3em;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 900;
+}
+
+.mission-container .statement h3 {
+  padding-top: 0.75em;
+  font-size: 1.5em;
+}
+
+@media only screen and (max-width: 1200px) {
+  .mission-container .statement h1 {
+    font-size: 1.5em;
+  }
+
+  .mission-container .statement h3 {
+    font-size: 1em;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .mission-container {
+    height: 28em;
+  }
+  .mission-container .statement {
+    width: 100%;
+    height: 40%;
+  }
+}
+
+/* games section */
+
+#games {
+  padding: 2rem;
+  background-image: url("../Images/hex-bg.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#games h2 {
+  font-size: 3em;
+  font-family: "Ubuntu";
+  font-weight: 700;
+  text-align: center;
+}
+
+.games-container {
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.games-container figure {
+  width: 25rem;
+  height: 18rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(79, 189, 186, 0.9);
+  border-radius: 3%;
+  position: relative;
+}
+
+.games-container figure:hover {
+  border-radius: 6%;
+  background-color: #35858b;
+  transition: 0.5s ease-in-out;
+}
+
+.games-container a {
+  box-shadow: -10px 10px 8px #35858b;
+  border-radius: 3%;
+  text-decoration: none;
+  margin: 1rem;
+}
+
+.games-container a:hover {
+  box-shadow: none;
+  border-radius: 10%;
+  transition: 0.5s ease-in-out;
+}
+
+.game-img {
+  width: 50%;
+}
+
+.game-caption {
+  font-size: 1.5em;
+  font-family: "Roboto";
+  color: white;
+  align-self: center;
+  position: absolute;
+  bottom: 3%;
+}
+
+figure .lol,
+figure .csgo {
+  width: 75%;
+}
+
+figure .steam {
+  height: 50%;
+}
+
+@media only screen and (max-width: 480px) {
+  #games h2 {
+    font-size: 2em;
+  }
+
+  .game-caption {
+    visibility: hidden;
+  }
+
+  .games-container figure {
+    width: 18.75rem;
   }
 }
